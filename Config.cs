@@ -15,6 +15,17 @@ public class Config
         Headers = _parser.ParseFile(content);
     }
 
+    public static Config FromFile(string fileName)
+    {
+        if (File.Exists(fileName))
+        {
+            string content = File.ReadAllText(fileName);
+            return new Config(content);
+        }
+        else
+            throw new Exception("File not found.");
+    }
+
     public FHeader GetHeader(string header)
     {
         return Headers.Where(x => x.Name == header).FirstOrDefault();
