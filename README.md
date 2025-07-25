@@ -1,4 +1,4 @@
-# FOG - Furkan's Object Grammar
+# fog - Furkan's Object Grammar
 
 A simple and lightweight configuration file parser and manager for .NET applications.
 
