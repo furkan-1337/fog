@@ -17,8 +17,7 @@ A simple and lightweight configuration file parser and manager for .NET applicat
 
 ```csharp
 // Load configuration from file content
-string configContent = File.ReadAllText("config.fog");
-Config config = new Config(configContent);
+Config config = Config.FromFile("config.fog");
 
 // Get values with type conversion
 int port = config.GetKeyValue<int>("Server", "Port");
